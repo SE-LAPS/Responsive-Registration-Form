@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <style>
+    
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins',sans-serif;
+        }
+
+
+        body{
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+         background-image: url("1.gif");
+        }
+
+
+        .container{
+          max-width: 700px;
+          width: 100%;
+          background-color: green;
+          opacity: .7;
+          padding: 25px 30px;
+          border-radius: 5px;
+          box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        }
+
+        .title{
+          color: white;
+          margin:25px 250px ;
+          font-size: 25px;
+          font-weight: 500;
+          position: relative;
+        }
+
+
+        .title::before{
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 3px;
+          width: 30px;
+          border-radius: 5px;
+          background: yellow;
+        }
+
+
+        .content form .user-details{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 20px 0 12px 0;
+        }
+
+
+        form .user-details .input-box{
+
+          margin-bottom: 15px;
+          width: calc(100% / 2 - 20px);
+        }
+
+
+        form .input-box span.details{
+          color: black;
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+
+        .user-details .input-box input{
+
+          height: 45px;
+          width: 100%;
+          outline: none;
+          font-size: 16px;
+          border-radius: 5px;
+          padding-left: 15px;
+          border: 1px solid #ccc;
+          border-bottom-width: 2px;
+          transition: all 0.3s ease;
+        }
+
+
+        .user-details .input-box select{
+
+          height: 45px;
+          width: 100%;
+          outline: none;
+          font-size: 16px;
+          color:#666666;
+          border-radius: 5px;
+          padding-left: 15px;
+          border: 1px solid #ccc;
+          border-bottom-width: 2px;
+          transition: all 0.3s ease;
+        }
+
+
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid{
+          border-color: purple;
+        }
+
+
+         .button .reg{
+           height: 45px;
+           width: 250px;
+           margin: 5px 32px;
+
+         }
+
+
+         .button .can{
+           height: 45px;
+           width: 250px;
+           margin: 0px 35px;
+
+
+         }
+
+         form .button input{
+           height: 100%;
+           width: 100%;
+           border-radius: 5px;
+           border: none;
+           color: yellow;
+           font-size: 18px;
+           font-weight: 500;
+           letter-spacing: 1px;
+           cursor: pointer;
+           transition: all 0.3s ease;
+           background: linear-gradient(135deg, yellowgreen, #9b59b6);
+         }
+
+         form .button input:hover{
+          background: linear-gradient(-135deg, yellowgreen, #9b59b6);
+          }
+
+         @media(max-width: 584px){
+         .container{
+          max-width: 100%;
+        }
+
+        form .user-details .input-box{
+            margin-bottom: 15px;
+            width: 100%;
+          }
+
+          form .category{
+            width: 100%;
+          }
+
+          .content form .user-details{
+            max-height: 300px;
+            overflow-y: scroll;
+          }
+
+          .user-details::-webkit-scrollbar{
+            width: 5px;
+          }
+          }
+
+          @media(max-width: 459px){
+          .container .content .category{
+            flex-direction: column;
+          }
+        }
+
+           </style>
+    
+    
+    
+    <body>
+      
+    <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+        
+        
+      <form action="Form.jsp" method="POST">
+          
+        <div class="user-details">
+            
+          <div class="input-box">
+            <span class="details">FULL NAME :</span>
+            <input type="text" placeholder="Enter Your Name" required name="fname" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">USER NAME :</span>
+            <input type="text" placeholder="Enter Your User Name" required name="uname" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">E-MAIL :</span>
+            <input type="text" placeholder="Enter Your E-mail" required name="email" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">PHONE NUMBER :</span>
+            <input type="text" placeholder="Enter Your Number" required name="pnum" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">ADDRESS :</span>
+            <input type="text" placeholder="Enter Your Address" required name="add" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">GENDER :</span>
+            <select name="gender" placeholder="Enter Your Address" required value="">
+                <option>Enter Your Address</option>
+                <option>MALE</option>
+                <option>FEMALE</option>
+                <option>OTHER</option>
+            </select>
+          </div>
+            
+          <div class="input-box">
+            <span class="details">PASSWORD :</span>
+            <input type="text" placeholder="Enter Your Password" required name="pwd" value="">
+          </div>
+            
+          <div class="input-box">
+            <span class="details">CONFIRM PASSWORD :</span>
+            <input type="text" placeholder="Confirm Your Password" required name="cpwd" value="">
+          </div>
+            
+        </div>
+             
+        <div class="button">
+                 <input type="submit" class="reg"  value="REGISTER">
+                 <input type="reset"  class="can"   value="CLEAR">
+        </div>
+          
+      </form>
+    </div>
+  </div>
+    </body>
+</html>
